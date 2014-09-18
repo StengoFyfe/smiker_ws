@@ -7,7 +7,12 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 
-
+/**
+ * UmsatzJson
+ * 
+ * Klasse um ein StTumsatz POJO in einen Json-String umzuwandeln
+ * Achtung: Hier muss auf die korrekte Darstellung der Datumsformate geachtet werden. 
+ */
 public class UmsatzJson extends UmsatzResult  {
 		private static SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
 	

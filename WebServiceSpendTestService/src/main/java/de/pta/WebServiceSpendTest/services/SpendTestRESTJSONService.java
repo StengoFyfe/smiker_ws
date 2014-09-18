@@ -44,6 +44,10 @@ import de.pta.fd.WebServiceSpendTest.model.additionalBeans.UmsatzResult;
 
 
 
+/**
+ * @author dietricf
+ *
+ */
 @Path(value="/SpendTestServices")
 public class SpendTestRESTJSONService {
 
@@ -61,6 +65,11 @@ public class SpendTestRESTJSONService {
 		}
 	}
 	
+	
+	/**
+	 * @param srcSet Set which will be sorted and returned as aa array
+	 * @return the sorted set in form of an array
+	 */
 	private StTabteilung[] getSortedList( List<StTabteilung> srcSet) {
 		StTabteilung[] arrList = new StTabteilung[srcSet.size()];
 		arrList = srcSet.toArray(arrList);
@@ -69,6 +78,11 @@ public class SpendTestRESTJSONService {
 		return arrList;
 	}	
 	
+	
+	/**
+	 * @param SessionID id to be checked if known and still alive
+	 * @return true = authenticated (session has been refreshed), false (no valid session)
+	 */
 	private boolean notAuthenticated( String SessionID ) {
 		SessionManager sessione = SessionManager.getInstance();		
 		

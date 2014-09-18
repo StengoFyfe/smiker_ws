@@ -21,6 +21,7 @@ public class StTstandort implements Serializable {
 	private long id;
 
 	
+	// GIT Test ... Log Me Meister...
 	// Name des Standortes
 	private String name;
 

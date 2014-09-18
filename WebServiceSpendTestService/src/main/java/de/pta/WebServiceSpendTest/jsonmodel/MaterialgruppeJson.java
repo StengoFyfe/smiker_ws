@@ -3,7 +3,11 @@ package de.pta.WebServiceSpendTest.jsonmodel;
 import de.pta.fd.WebServiceSpendTest.model.StTmatgruppe;
 
 
-
+/**
+ * MaterialgruppeJson
+ * 
+ * Klasse um ein StTmatgruppe POJO in einen Json-String umzuwandeln 
+ */
 public class MaterialgruppeJson extends StTmatgruppe  {
 	
 		/**

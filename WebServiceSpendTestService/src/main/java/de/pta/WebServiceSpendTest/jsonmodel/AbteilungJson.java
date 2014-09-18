@@ -2,11 +2,13 @@ package de.pta.WebServiceSpendTest.jsonmodel;
 
 import de.pta.fd.WebServiceSpendTest.model.StTabteilung;
 
-
+/**
+ * AbteilungJson
+ * 
+ * Klasse um ein StTabteilung POJO in einen Json-String umzuwandeln 
+ */
 public class AbteilungJson extends StTabteilung {
-	/**
-	 * 
-	 */
+
 	private static final long serialVersionUID = 1L;
 	
 	private Long fkStandort = 0L;
