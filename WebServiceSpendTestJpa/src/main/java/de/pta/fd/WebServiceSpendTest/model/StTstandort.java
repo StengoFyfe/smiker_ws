@@ -20,6 +20,8 @@ public class StTstandort implements Serializable {
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="ST_TSTANDORT_ID_GENERATOR")
 	private long id;
 
+	
+	// Name des Standortes
 	private String name;
 
 	private String nummer;
