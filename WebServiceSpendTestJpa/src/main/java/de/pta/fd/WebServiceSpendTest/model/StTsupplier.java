@@ -1,7 +1,6 @@
 package de.pta.fd.WebServiceSpendTest.model;
 
 import java.io.Serializable;
-
 import javax.persistence.*;
 
 
@@ -16,7 +15,8 @@ public class StTsupplier implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@SequenceGenerator(name="ST_TSUPPLIER_ID_GENERATOR", sequenceName="SUPPLIER_SEQ")
+	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="ST_TSUPPLIER_ID_GENERATOR")
 	private long id;
 
 	private String firma;

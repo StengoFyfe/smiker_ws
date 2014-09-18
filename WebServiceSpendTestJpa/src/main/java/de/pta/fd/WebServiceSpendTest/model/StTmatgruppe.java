@@ -6,18 +6,19 @@ import java.util.List;
 
 
 /**
- * The persistent class for the st_tmatgruppe database table.
+ * The persistent class for the ST_TMATGRUPPE database table.
  * 
  */
 @Entity
-@Table(name="st_tmatgruppe")
+@Table(name="ST_TMATGRUPPE")
 @NamedQuery(name="StTmatgruppe.findAll", query="SELECT s FROM StTmatgruppe s")
 public class StTmatgruppe implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	private int id;
+	@SequenceGenerator(name="ST_TMATGRUPPE_ID_GENERATOR", sequenceName="MATGRUPPE_SEQ")
+	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="ST_TMATGRUPPE_ID_GENERATOR")
+	private long id;
 
 	private String matcode;
 
@@ -35,11 +36,11 @@ public class StTmatgruppe implements Serializable {
 	public StTmatgruppe() {
 	}
 
-	public int getId() {
+	public long getId() {
 		return this.id;
 	}
 
-	public void setId(int id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 

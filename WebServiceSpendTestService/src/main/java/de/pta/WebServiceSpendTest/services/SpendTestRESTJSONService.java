@@ -562,7 +562,7 @@ public class SpendTestRESTJSONService {
 		List<StTabteilung> childSet = abteilungParent.getStTabteilungs();
 		StTabteilung[] arrList = getSortedList(childSet);
 		
-		for(StTabteilung var : arrList ) { 
+		for(StTabteilung var : arrList ) {
 			retList.add( new AbteilungJson( var, StandortId, abteilungParent.getId(), Depth + 1) );
 			
 			LoadTreeRecursive( retList, StandortId, var, Depth + 1);

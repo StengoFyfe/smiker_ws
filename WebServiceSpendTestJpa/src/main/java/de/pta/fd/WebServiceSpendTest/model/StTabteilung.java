@@ -6,18 +6,19 @@ import java.util.List;
 
 
 /**
- * The persistent class for the st_tabteilung database table.
+ * The persistent class for the ST_TABTEILUNG database table.
  * 
  */
 @Entity
-@Table(name="st_tabteilung")
+@Table(name="ST_TABTEILUNG")
 @NamedQuery(name="StTabteilung.findAll", query="SELECT s FROM StTabteilung s")
 public class StTabteilung implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	private int id;
+	@SequenceGenerator(name="ST_TABTEILUNG_ID_GENERATOR", sequenceName="ABTEILUNG_SEQ")
+	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="ST_TABTEILUNG_ID_GENERATOR")
+	private long id;
 
 	@Column(name="ABT_NUMMER")
 	private String abtNummer;
@@ -41,11 +42,11 @@ public class StTabteilung implements Serializable {
 	public StTabteilung() {
 	}
 
-	public int getId() {
+	public long getId() {
 		return this.id;
 	}
 
-	public void setId(int id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 

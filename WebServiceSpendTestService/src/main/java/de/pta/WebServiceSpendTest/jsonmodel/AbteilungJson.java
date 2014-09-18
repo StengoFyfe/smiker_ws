@@ -37,24 +37,6 @@ public class AbteilungJson extends StTabteilung {
 		this.setAbtNummer(ab.getAbtNummer());
 		this.setTreepos(treepos);
 	}
-	
-	public AbteilungJson( StTabteilung ab, int fkStandort, Long fkParent, int treepos) {
-		this.setId(ab.getId());
-		this.setFkStandort(new Long(fkStandort));
-		this.setFkParent(fkParent);
-		this.setName(ab.getName());
-		this.setAbtNummer(ab.getAbtNummer());
-		this.setTreepos(treepos);
-	}
-
-	public AbteilungJson( StTabteilung ab, Long fkStandort, int fkParent, int treepos) {
-		this.setId(ab.getId());
-		this.setFkStandort(new Long(fkStandort));
-		this.setFkParent(new Long(fkParent));
-		this.setName(ab.getName());
-		this.setAbtNummer(ab.getAbtNummer());
-		this.setTreepos(treepos);
-	}
 
 	public int getTreepos() {
 		return treepos;
