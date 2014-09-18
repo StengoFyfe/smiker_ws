@@ -2,6 +2,11 @@ package de.pta.WebServiceSpendTest.jsonmodel;
 
 import de.pta.fd.WebServiceSpendTest.model.StTstandort;
 
+/**
+ * StandortJson
+ * 
+ * Klasse um ein StTstandort POJO in einen Json-String umzuwandeln 
+ */
 public class StandortJson extends StTstandort {
 	/**
 	 * 

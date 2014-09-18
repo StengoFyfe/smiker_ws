@@ -3,7 +3,11 @@ package de.pta.WebServiceSpendTest.jsonmodel;
 import de.pta.fd.WebServiceSpendTest.model.StTsupplier;
 
 
-
+/**
+ * SupplierJson
+ * 
+ * Klasse um ein StTsupplier POJO in einen Json-String umzuwandeln 
+ */
 public class SupplierJson extends StTsupplier  {
 	
 		/**
