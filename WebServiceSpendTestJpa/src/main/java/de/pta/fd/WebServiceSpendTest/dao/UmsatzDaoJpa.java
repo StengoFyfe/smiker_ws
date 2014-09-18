@@ -69,7 +69,7 @@ public class UmsatzDaoJpa extends GenericDaoJpa<StTumsatz, Long> implements
 		for( Object result : resultList) {
 			Object [] resultArr = (Object[]) result;
 			UmsatzResult NewUms = new UmsatzResult();
-		    NewUms.setId(((BigDecimal)resultArr[0]).longValue());
+		    NewUms.setId(new Long((int)resultArr[0]));
 		    NewUms.setBuchungsdatum((java.util.Date)resultArr[1]);
 		    NewUms.setBetrag((BigDecimal)resultArr[2]);
 		    NewUms.setRefUmsatztyp((String)resultArr[3]);

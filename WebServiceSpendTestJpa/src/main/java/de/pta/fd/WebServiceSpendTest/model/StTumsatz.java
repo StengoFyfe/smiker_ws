@@ -1,51 +1,45 @@
 package de.pta.fd.WebServiceSpendTest.model;
 
 import java.io.Serializable;
+
 import javax.persistence.*;
-import java.sql.Timestamp;
+
 import java.math.BigDecimal;
+import java.util.Date;
 
 
 /**
- * The persistent class for the ST_TUMSATZ database table.
+ * The persistent class for the st_tumsatz database table.
  * 
  */
 @Entity
-@Table(name="ST_TUMSATZ")
+@Table(name="st_tumsatz")
 @NamedQuery(name="StTumsatz.findAll", query="SELECT s FROM StTumsatz s")
 public class StTumsatz implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-	@Id
-	@SequenceGenerator(name="ST_TUMSATZ_ID_GENERATOR", sequenceName="UMSATZ_SEQ")
-	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="ST_TUMSATZ_ID_GENERATOR")
-	private long id;
-
 	private BigDecimal betrag;
 
-	private Timestamp buchungsdatum;
+	@Temporal(TemporalType.DATE)
+	private Date buchungsdatum;
 
 	@Column(name="FK_ABTEILUNG")
-	private BigDecimal fkAbteilung;
+	private int fkAbteilung;
 
 	@Column(name="FK_MATGRUPPE")
-	private BigDecimal fkMatgruppe;
+	private int fkMatgruppe;
 
 	@Column(name="FK_REF_UMSATZTYP")
-	private BigDecimal fkRefUmsatztyp;
+	private int fkRefUmsatztyp;
 
 	@Column(name="FK_SUPPLIER")
-	private BigDecimal fkSupplier;
+	private int fkSupplier;
+
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private int id;
 
 	public StTumsatz() {
-	}
-
-	public long getId() {
-		return this.id;
-	}
-
-	public void setId(long id) {
-		this.id = id;
 	}
 
 	public BigDecimal getBetrag() {
@@ -56,44 +50,52 @@ public class StTumsatz implements Serializable {
 		this.betrag = betrag;
 	}
 
-	public Timestamp getBuchungsdatum() {
+	public Date getBuchungsdatum() {
 		return this.buchungsdatum;
 	}
 
-	public void setBuchungsdatum(Timestamp buchungsdatum) {
+	public void setBuchungsdatum(Date buchungsdatum) {
 		this.buchungsdatum = buchungsdatum;
 	}
 
-	public BigDecimal getFkAbteilung() {
+	public int getFkAbteilung() {
 		return this.fkAbteilung;
 	}
 
-	public void setFkAbteilung(BigDecimal fkAbteilung) {
+	public void setFkAbteilung(int fkAbteilung) {
 		this.fkAbteilung = fkAbteilung;
 	}
 
-	public BigDecimal getFkMatgruppe() {
+	public int getFkMatgruppe() {
 		return this.fkMatgruppe;
 	}
 
-	public void setFkMatgruppe(BigDecimal fkMatgruppe) {
+	public void setFkMatgruppe(int fkMatgruppe) {
 		this.fkMatgruppe = fkMatgruppe;
 	}
 
-	public BigDecimal getFkRefUmsatztyp() {
+	public int getFkRefUmsatztyp() {
 		return this.fkRefUmsatztyp;
 	}
 
-	public void setFkRefUmsatztyp(BigDecimal fkRefUmsatztyp) {
+	public void setFkRefUmsatztyp(int fkRefUmsatztyp) {
 		this.fkRefUmsatztyp = fkRefUmsatztyp;
 	}
 
-	public BigDecimal getFkSupplier() {
+	public int getFkSupplier() {
 		return this.fkSupplier;
 	}
 
-	public void setFkSupplier(BigDecimal fkSupplier) {
+	public void setFkSupplier(int fkSupplier) {
 		this.fkSupplier = fkSupplier;
+	}
+
+	public int getId() {
+		return this.id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 }

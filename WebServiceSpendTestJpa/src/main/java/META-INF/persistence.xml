@@ -4,17 +4,27 @@
  --> 
 <persistence-unit name="WebAppSpendTestJpa">
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
-		<non-jta-data-source>java:jboss/LIDLOraDB2-ds</non-jta-data-source>
-		
+		<non-jta-data-source>java:jboss/spendtestmysql-ds</non-jta-data-source>
 		  <class>de.pta.fd.WebServiceSpendTest.model.StRumsatztyp</class>
 		  <class>de.pta.fd.WebServiceSpendTest.model.StTabteilung</class>
 		  <class>de.pta.fd.WebServiceSpendTest.model.StTmatgruppe</class>
 		  <class>de.pta.fd.WebServiceSpendTest.model.StTstandort</class>
-		  <class>de.pta.fd.WebServiceSpendTest.model.StTsupplier</class>
+		  <class>de.pta.fd.WebServiceSpendTest.model.StTsupplier</class>		  
 		  <class>de.pta.fd.WebServiceSpendTest.model.StTumsatz</class>		
 		
 	 	<properties>
- 		  <property name="hibernate.archive.autodetection" value="class" />
+ 			<property name="hibernate.connection.username" value="ProjectUser" /> 
+ 			<property name="hibernate.connection.password" value="ProjectUser" /> 
+ 			<property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/spendtestdb" /> 
+			<property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" /> 
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect" /> 
+ 			<property name="hibernate.archive.autodetection" value="class" /> 
+			<property name="hibernate.show_sql" value="true" /> 
+ 			<property name="hibernate.format_sql" value="true" /> 
+			<property name="hibernate.use_sql_comments" value="true" /> 
+ 			<property name="connection.autocommit" value="false" /> 
+ 				 	
+ 		  <!-- property name="hibernate.archive.autodetection" value="class" />
 		  <property name="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect"></property>
 		  <property name="hibernate.connection.driver_class" value="oracle.jdbc.driver.OracleDriver"></property>
 		  <property name="hibernate.connection.url" value="jdbc:oracle:thin:@LIDLORADB2.PTA.DE:1521:NAPDB00"></property>
@@ -28,7 +38,7 @@
 		  <property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider"></property>
 		  <property name="hibernate.transaction.factory_class" value="org.hibernate.transaction.JDBCTransactionFactory"></property>
 		  <property name="hibernate.current_session_context_class" value="thread"></property>
-		  <property name="hibernate.jdbc.use_get_generated_keys" value="true"></property>
+		  <property name="hibernate.jdbc.use_get_generated_keys" value="true"></property -->
 
 		  </properties>		
 		

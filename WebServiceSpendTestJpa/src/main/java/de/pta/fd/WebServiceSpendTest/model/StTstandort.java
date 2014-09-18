@@ -6,36 +6,35 @@ import java.util.List;
 
 
 /**
- * The persistent class for the ST_TSTANDORT database table.
+ * The persistent class for the st_tstandort database table.
  * 
  */
 @Entity
-@Table(name="ST_TSTANDORT")
+@Table(name="st_tstandort")
 @NamedQuery(name="StTstandort.findAll", query="SELECT s FROM StTstandort s")
 public class StTstandort implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@SequenceGenerator(name="ST_TSTANDORT_ID_GENERATOR", sequenceName="STANDORT_SEQ")
-	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="ST_TSTANDORT_ID_GENERATOR")
-	private long id;
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private int id;
 
 	private String name;
 
 	private String nummer;
 
 	//bi-directional many-to-one association to StTabteilung
-	@OneToMany(mappedBy="stTstandort", cascade={CascadeType.ALL})
+	@OneToMany(mappedBy="stTstandort")
 	private List<StTabteilung> stTabteilungs;
 
 	public StTstandort() {
 	}
 
-	public long getId() {
+	public int getId() {
 		return this.id;
 	}
 
-	public void setId(long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
