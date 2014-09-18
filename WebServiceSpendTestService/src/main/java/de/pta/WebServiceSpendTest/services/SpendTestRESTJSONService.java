@@ -156,7 +156,13 @@ public class SpendTestRESTJSONService {
 	
 
 	
+	
 
+	/**
+	 * @param name (nicht relevanter Parameter)
+	 * @param SessID (Session-ID, welche vom Client als Header Info mitgegeben werden muss
+	 * @return Response als JSon-Result
+	 */
 	@POST
 	@Path("/standorte/{name}")
 	//@Produces("application/json")
