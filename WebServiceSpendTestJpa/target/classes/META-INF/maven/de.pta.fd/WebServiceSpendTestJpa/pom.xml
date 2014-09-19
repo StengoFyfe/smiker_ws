@@ -9,7 +9,12 @@
   
   <dependencies>
 
-	</dependencies>
+	<dependency>
+		<groupId>com.oracle</groupId>
+		<artifactId>ojdbc7</artifactId>
+		<version>11.2.0</version>
+	</dependency>
+  </dependencies>
   <groupId>de.pta.fd</groupId>
   <version>0.0.1</version>
 </project>

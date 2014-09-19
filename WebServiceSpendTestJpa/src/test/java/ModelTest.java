@@ -45,61 +45,61 @@ public class ModelTest extends TestCase {
 	
 	
 	public void testModel( ) {
-//		// Test Model Bean
-//		LOGGER.info("Test StRumsatztyp");
-//		StRumsatztyp rum = new StRumsatztyp();
-//		rum.setId(123);
-//		rum.setUmsatzTyp("Killefitz");
-//		assertEquals( rum.getId(), 123);
-//		assertEquals(rum.getUmsatzTyp(), "Killefitz");
-//		
-//		// Test der Listen
-//		LOGGER.info("Test Standortliste");
-//		StandortDaoJpa sojpa = new StandortDaoJpa();
-//		List<StTstandort> soList = sojpa.getAllStandorte();
-//		
-//		assertEquals(soList.size() > 0, true);
-//		
-//		LOGGER.info("Test Abteilungsliste");
-//		List<StTabteilung> aset = soList.get(0).getStTabteilungs();
-//		
-//		assertEquals( aset.size() > 0, true);
-//		
-//		
-//		LOGGER.info("Test Materialgruppen");
-//		MatgruppeDaoJpa majpa = new MatgruppeDaoJpa();
-//		List<StTmatgruppe> malist = majpa.GetMaterialgruppenListe(null);
-//		
-//		assertEquals( malist.size() > 0, true);
-//		
-//		
-//		LOGGER.info("Lieferanten testen");
-//		SupplierDaoJpa sujpa = new SupplierDaoJpa();
-//		List<StTsupplier> sulist = sujpa.GetAllSuppliers();
-//		
-//		assertEquals( sulist.size() > 0,  true);
-//		
-//		
-//		
-//		
-//		// Test Umsatz-Funktion
-//		LOGGER.info("Umsatz-Funktion testen");
-//		UmsatzDaoJpa umsdao = new UmsatzDaoJpa();
-//		Long aid, mid, sid;
-//		aid = aset.iterator().next().getId();
-//		mid = malist.get(0).getId();
-//		sid = sulist.get(0).getId();
-//		
-//		List<StTumsatz> umslist = umsdao.GetUmsaetze( aid, mid, sid);
-//		assertEquals("Umsatztabelle leer", umslist.size() > 0, true); 
-//		
-//		UmsatzDaoJpa umdao2 = new UmsatzDaoJpa();
-//		List<UmsatzResult> umslist2 = umdao2.GetUmsaetzeDirekt(aid, mid, sid);
-//		assertEquals("Umsatztabelle2 leer", umslist2.size() > 0, true);
-//		
-//		assertEquals("Umsatzfunktionen liefern unterschiedliche Ergebnisse", umslist.size(), umslist2.size());
-//		
-//
+		// Test Model Bean
+		LOGGER.info("Test StRumsatztyp");
+		StRumsatztyp rum = new StRumsatztyp();
+		rum.setId(123);
+		rum.setUmsatzTyp("Killefitz");
+		assertEquals( rum.getId(), 123);
+		assertEquals(rum.getUmsatzTyp(), "Killefitz");
+		
+		// Test der Listen
+		LOGGER.info("Test Standortliste");
+		StandortDaoJpa sojpa = new StandortDaoJpa();
+		List<StTstandort> soList = sojpa.getAllStandorte();
+		
+		assertEquals(soList.size() > 0, true);
+		
+		LOGGER.info("Test Abteilungsliste");
+		List<StTabteilung> aset = soList.get(0).getStTabteilungs();
+		
+		assertEquals( aset.size() > 0, true);
+		
+		
+		LOGGER.info("Test Materialgruppen");
+		MatgruppeDaoJpa majpa = new MatgruppeDaoJpa();
+		List<StTmatgruppe> malist = majpa.GetMaterialgruppenListe(null);
+		
+		assertEquals( malist.size() > 0, true);
+		
+		
+		LOGGER.info("Lieferanten testen");
+		SupplierDaoJpa sujpa = new SupplierDaoJpa();
+		List<StTsupplier> sulist = sujpa.GetAllSuppliers();
+		
+		assertEquals( sulist.size() > 0,  true);
+		
+		
+		
+		
+		// Test Umsatz-Funktion
+		LOGGER.info("Umsatz-Funktion testen");
+		UmsatzDaoJpa umsdao = new UmsatzDaoJpa();
+		Long aid, mid, sid;
+		aid = aset.iterator().next().getId();
+		mid = malist.get(0).getId();
+		sid = sulist.get(0).getId();
+		
+		List<StTumsatz> umslist = umsdao.GetUmsaetze( aid, mid, sid);
+		assertEquals("Umsatztabelle leer", umslist.size() > 0, true); 
+		
+		UmsatzDaoJpa umdao2 = new UmsatzDaoJpa();
+		List<UmsatzResult> umslist2 = umdao2.GetUmsaetzeDirekt(aid, mid, sid);
+		assertEquals("Umsatztabelle2 leer", umslist2.size() > 0, true);
+		
+		assertEquals("Umsatzfunktionen liefern unterschiedliche Ergebnisse", umslist.size(), umslist2.size());
+		
+
 		
 	}
 
